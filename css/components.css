@@ -1,0 +1,16 @@
+/* Specialized Component Styles */
+.badge-gold {
+  background-color: var(--pv-gold-primary);
+  color: var(--pv-ink-deep);
+  font-weight: 600;
+}
+
+.glass-modal {
+  background: rgba(11, 10, 10, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--pv-ink-border);
+}
+
+.max-w-400 { max-width: 400px; margin: 0 auto; }
+.max-w-600 { max-width: 600px; margin: 0 auto; }
+.max-w-800 { max-width: 800px; margin: 0 auto; }
