@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://theraushanrajx.github.io/PrajnaVerse/sitemap.xml
