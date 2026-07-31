@@ -1,0 +1,16 @@
+{
+  "name": "PrajñaVerse V2",
+  "short_name": "PrajnaVerse",
+  "description": "Minimalist digital ecosystem.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0B0A0A",
+  "theme_color": "#D9A548",
+  "icons": [
+    {
+      "src": "images/logo.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
