@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrajñaVerse V2 — Digital Ecosystem</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Inline Fallback Tokens in case style.css is cached or missing */
+    :root {
+      --pv-ink-deep: #050505;
+      --pv-ink-base: #0B0A0A;
+      --pv-gold-primary: #D9A548;
+      --pv-gold-soft: #F0C878;
+      --pv-ember-warm: #C9622E;
+      --pv-parchment: #EFE6D8;
+    }
+    body {
+      background-color: var(--pv-ink-base) !important;
+      color: var(--pv-parchment) !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .pv-card {
+      background: rgba(20, 18, 14, 0.85);
+      border: 1px solid rgba(239, 230, 216, 0.15);
+      border-radius: 8px;
+    }
+    .text-gold { color: var(--pv-gold-primary) !important; }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--pv-gold-primary), var(--pv-ember-warm));
+      color: #050505;
+      font-weight: 600;
+      border: none;
+    }
+    .btn-gold:hover {
+      opacity: 0.9;
+      color: #050505;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary border-opacity-25 py-3 px-4">
+    <div class="container">
+      <a class="navbar-brand text-gold fs-4 fw-bold" href="index.html">PrajñaVerse</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3">
+          <li class="nav-item"><a class="nav-link active text-light" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-secondary" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-secondary" href="blog.html">Blog</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-gold btn-sm px-3">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="text-center py-5 container">
+    <div class="py-4">
+      <h1 class="display-3 fw-bold text-light mb-3">Welcome to PrajñaVerse</h1>
+      <p class="lead text-secondary max-w-600 mx-auto">
+        A minimalist digital ecosystem built for modern creators, developers, and thinkers.
+      </p>
+      <div class="mt-4">
+        <a href="#products" class="btn btn-gold btn-lg me-2">Explore Products</a>
+        <a href="#contact" class="btn btn-outline-warning btn-lg">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Products Section -->
+  <section id="products" class="py-5 container">
+    <h2 class="text-gold mb-4 fw-bold h3">Featured Artifacts & Tools</h2>
+    <div class="row g-4" id="products-grid">
+      <!-- Fallback static products rendered via script -->
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact" class="py-5 container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="pv-card p-4 p-md-5">
+          <h2 class="text-gold fw-bold h3 mb-2">Initiate Contact</h2>
+          <p class="text-secondary small mb-4">Send a direct message to our team.</p>
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <!-- Replace with your Web3Forms free key or leave as demo -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+
+            <div class="mb-3">
+              <label class="form-label text-secondary small">Your Name</label>
+              <input type="text" name="name" class="form-control bg-transparent text-light border-secondary" placeholder="John Doe" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-secondary small">Email Address</label>
+              <input type="email" name="email" class="form-control bg-transparent text-light border-secondary" placeholder="john@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-secondary small">Message</label>
+              <textarea name="message" rows="4" class="form-control bg-transparent text-light border-secondary" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold w-100 py-2">Dispatch Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 border-top border-secondary border-opacity-25 mt-5">
+    <p class="text-secondary small m-0">&copy; 2026 PrajñaVerse. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Inline Render Engine -->
+  <script>
+    const PRAJNA_DATA = {
+      products: [
+        {
+          id: "prod_1",
+          title: "Digital Mind Blueprint",
+          price: "$29",
+          category: "Framework",
+          description: "A complete mental models and productivity framework for digital creators.",
+          downloadUrl: "#"
+        },
+        {
+          id: "prod_2",
+          title: "Prajña Glassmorphic UI Kit",
+          price: "$49",
+          category: "Design System",
+          description: "A set of production-ready dark mode UI components designed for high-performance sites.",
+          downloadUrl: "#"
+        },
+        {
+          id: "prod_3",
+          title: "Developer Core Stack",
+          price: "$19",
+          category: "Cheatsheet",
+          description: "Essential architecture patterns, JavaScript optimization, and client-side storage tools.",
+          downloadUrl: "#"
+        }
+      ]
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('products-grid');
+      if (grid) {
+        grid.innerHTML = PRAJNA_DATA.products.map(p => `
+          <div class="col-md-4">
+            <div class="pv-card p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <span class="badge bg-warning text-dark mb-2">${p.category}</span>
+                <h3 class="h5 text-light fw-bold">${p.title}</h3>
+                <p class="text-secondary small">${p.description}</p>
+              </div>
+              <div class="pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center mt-3">
+                <span class="text-gold fw-bold h5 mb-0">${p.price}</span>
+                <a href="${p.downloadUrl}" class="btn btn-outline-warning btn-sm">Get Access</a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>
