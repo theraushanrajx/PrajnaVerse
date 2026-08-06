@@ -1,83 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PrajñaVerse V2 — Digital Ecosystem</title>
-  
-  <!-- Manifest & Favicon -->
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PrajñaVerse — Raushan Raj | Author, Creator & Software Engineer</title>
+<meta name="description" content="PrajñaVerse — the author, creator and engineering portfolio of Raushan Raj. Full-stack software engineer, writer, and founder." />
+<meta property="og:title" content="PrajñaVerse — Raushan Raj" />
+<meta property="og:description" content="Author, creator, and software engineer crafting deliberate, high-performance web systems and writing on code, markets, and craft." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:,">
 
-<link rel="icon" href="images/logo.svg" type="image/svg+xml">
-<link rel="shortcut icon" href="images/logo.svg" type="image/svg+xml">
-  
-  <!-- Bootstrap 5 CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  
-  <!-- Custom Stylesheets -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/components.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary border-opacity-25 py-3 px-4 sticky-top">
-    <div class="container">
-      <a class="navbar-brand text-gold fs-4 fw-bold d-flex align-items-center gap-2" href="index.html">
-        <img src="images/logo.svg" alt="Logo" width="30" height="30">
-        PrajñaVerse
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3">
-          <li class="nav-item"><a class="nav-link active text-light" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-secondary" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link text-secondary" href="products.html">Products</a></li>
-          <li class="nav-item"><a class="nav-link text-secondary" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link text-secondary" href="resources.html">Resources</a></li>
-        </ul>
-        <a href="login.html" class="btn btn-outline-warning btn-sm me-2">Sign In</a>
-        <a href="contact.html" class="btn btn-gold btn-sm px-3">Contact</a>
+<header id="site-header" class="site-nav"></header>
+
+<header class="hero" id="top">
+  <div class="container">
+    <span class="eyebrow">Available for software engineering roles</span>
+    <h1>Building <em>deliberate</em> software.<br>Writing what I learn on the way.</h1>
+    <p class="lede">
+      I'm <strong>Raushan Raj</strong> — a Computer Engineering graduate, full-stack developer,
+      and the author behind PrajñaVerse. I engineer web systems with discipline and mathematical
+      rigor, and I write about code, markets, and the craft of building.
+    </p>
+    <div class="cta-row">
+      <a href="index.html#work" class="btn solid">View Selected Work</a>
+      <a href="blog.html" class="btn">Read the Blog</a>
+      <a href="index.html#resume" class="btn ghost">Resume</a>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><div class="num">2026</div><div class="label">Graduation Year</div></div>
+      <div class="stat"><div class="num">04+</div><div class="label">Shipped Projects</div></div>
+      <div class="stat"><div class="num">100%</div><div class="label">Commitment to Quality</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <div class="verse-marker"><span>I</span><span class="deva">।</span><span>Engineering Journey</span></div>
+    <div class="row align-items-center g-5">
+      <div class="col-lg-4" data-reveal>
+        <img src="assets/raushanraj.jpeg" alt="Raushan Raj" class="img-fluid" style="border:1px solid var(--line); filter:grayscale(0.15);">
+      </div>
+      <div class="col-lg-8" data-reveal>
+        <h2>Rooted in fundamentals, driven by execution.</h2>
+        <p style="color:var(--parchment-dim); max-width:60ch;">
+          I am a final-year B.Tech Computer Engineering graduate <strong>(2022–2026)</strong>.
+          My approach to software blends core computer science principles with practical
+          full-stack execution — and a habit of writing down what I learn along the way.
+        </p>
+        <p style="color:var(--parchment-dim); max-width:60ch;">
+          Beyond coursework, my mindset has been sharpened by technical market analysis and
+          algorithmic trading — disciplines that demand strict risk management, rapid
+          problem-solving, and continuous learning under real-world stress.
+        </p>
       </div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- Hero Section -->
-  <header class="text-center py-5 container">
-    <div class="py-5">
-      <h1 class="display-3 fw-bold text-light mb-3">Welcome to PrajñaVerse</h1>
-      <p class="lead text-secondary max-w-600 mx-auto">
-        A minimalist digital ecosystem built for modern creators, developers, and thinkers.
-      </p>
-      <div class="mt-4">
-        <a href="products.html" class="btn btn-gold btn-lg me-2">Explore Products</a>
-        <a href="contact.html" class="btn btn-outline-warning btn-lg">Get in Touch</a>
+<section id="skills">
+  <div class="container">
+    <div class="verse-marker"><span>II</span><span class="deva">॥</span><span>Technical Stack</span></div>
+    <h2>Capabilities &amp; expertise</h2>
+    <div class="grid grid-4" style="margin-top:2.5rem;">
+      <div class="skill-group" data-reveal>
+        <h4>Programming</h4>
+        <ul><li>C / C++</li><li>Python</li><li>Java</li><li>JavaScript (ES6+)</li></ul>
+      </div>
+      <div class="skill-group" data-reveal>
+        <h4>Frontend</h4>
+        <ul><li>HTML5 / CSS3</li><li>Bootstrap 5</li><li>DOM Manipulation</li><li>Responsive Design</li></ul>
+      </div>
+      <div class="skill-group" data-reveal>
+        <h4>Backend &amp; DB</h4>
+        <ul><li>Django</li><li>PHP</li><li>Supabase / PostgreSQL</li><li>RESTful APIs</li></ul>
+      </div>
+      <div class="skill-group" data-reveal>
+        <h4>Core CS &amp; Tools</h4>
+        <ul><li>Data Structures &amp; Algorithms</li><li>Git &amp; GitHub</li><li>Linux / Bash</li><li>Technical Analysis</li></ul>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- Featured Products Section -->
-  <section id="products" class="py-5 container">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2 class="text-gold fw-bold h3 m-0">Featured Artifacts</h2>
-      <a href="products.html" class="text-warning small text-decoration-none">View All &rarr;</a>
+<section id="work">
+  <div class="container">
+    <div class="verse-marker"><span>III</span><span class="deva">॥</span><span>Portfolio</span></div>
+    <h2>Featured projects</h2>
+    <p style="color:var(--parchment-dim); max-width:60ch;">Production-ready systems, full-stack implementations, and algorithmic tools.</p>
+    <div class="grid grid-2" style="margin-top:2.5rem;">
+
+      <div class="card" data-reveal>
+        <span class="tag">Verse I · Full Stack</span>
+        <h3>Food Ordering Platform</h3>
+        <p>A dynamic food ordering system built with PHP and MySQL — user authentication, session management, dynamic cart updates, and structured relational schemas.</p>
+        <div class="chip-row"><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Bootstrap</span><span class="chip">JavaScript</span></div>
+        <p style="margin-top:1.25rem;"><a href="https://github.com/theraushanrajx">GitHub Repository ↗</a></p>
+      </div>
+
+      <div class="card" data-reveal>
+        <span class="tag">Verse II · Backend</span>
+        <h3>Django Authentication &amp; Management System</h3>
+        <p>Secure web architecture with robust signup, login, password encryption, role-based authorization, and an admin dashboard.</p>
+        <div class="chip-row"><span class="chip">Python</span><span class="chip">Django</span><span class="chip">SQLite/MySQL</span><span class="chip">HTML/CSS</span></div>
+        <p style="margin-top:1.25rem;"><a href="https://github.com/theraushanrajx">GitHub Repository ↗</a></p>
+      </div>
+
+      <div class="card" data-reveal>
+        <span class="tag">Verse III · Machine Learning</span>
+        <h3>Movie Recommendation Engine</h3>
+        <p>Content-based filtering using vector similarity and NLP to recommend personalized movies from metadata and user preferences.</p>
+        <div class="chip-row"><span class="chip">Python</span><span class="chip">Scikit-Learn</span><span class="chip">Pandas</span><span class="chip">Streamlit</span></div>
+        <p style="margin-top:1.25rem;"><a href="https://github.com/theraushanrajx">GitHub Repository ↗</a></p>
+      </div>
+
+      <div class="card" data-reveal>
+        <span class="tag">Verse IV · In Development</span>
+        <h3>Algorithmic Trading &amp; Quantitative Engine</h3>
+        <p>An automated backtesting framework and risk-analysis engine evaluating quantitative strategies across stock and forex time-series data.</p>
+        <div class="chip-row"><span class="chip">Python</span><span class="chip">NumPy</span><span class="chip">TradingView API</span><span class="chip">REST APIs</span></div>
+      </div>
+
     </div>
-    <div class="row g-4" id="products-grid">
-      <!-- Loaded dynamically via js/app.js -->
+  </div>
+</section>
+
+<section id="resume">
+  <div class="container">
+    <div class="verse-marker"><span>IV</span><span class="deva">॥</span><span>Qualifications</span></div>
+    <div class="row align-items-center">
+      <div class="col-lg-8" data-reveal>
+        <h2>Raushan Raj</h2>
+        <p style="color:var(--parchment-dim);">B.Tech Computer Engineering · 2022–2026</p>
+      </div>
+      <div class="col-lg-4 text-lg-end" data-reveal>
+        <a href="assets/raushanraj.pdf" class="btn solid">Download Resume</a>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="text-center py-4 border-top border-secondary border-opacity-25 mt-5">
-    <p class="text-secondary small m-0">&copy; 2026 PrajñaVerse. All rights reserved.</p>
-  </footer>
+<footer id="site-footer"></footer>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/partials.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
