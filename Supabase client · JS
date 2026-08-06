@@ -1,0 +1,70 @@
+// ============================================================
+// PrajñaVerse — Supabase client wrapper
+// Loaded after the Supabase UMD bundle and config.js.
+// Every function fails soft: on any error it returns an empty
+// result rather than throwing, so pages keep rendering with an
+// empty-state message instead of breaking.
+// ============================================================
+(function () {
+  const { SUPABASE_URL, SUPABASE_ANON_KEY } = window.PRAJNA_CONFIG || {};
+  let client = null;
+
+  function getClient() {
+    if (client) return client;
+    if (!window.supabase || !SUPABASE_URL || SUPABASE_URL.includes("YOUR-PROJECT-REF")) {
+      console.warn("[PrajnaVerse] Supabase is not configured yet — edit js/config.js");
+      return null;
+    }
+    client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    return client;
+  }
+
+  async function fetchProducts() {
+    const db = getClient();
+    if (!db) return [];
+    const { data, error } = await db
+      .from("products")
+      .select("*")
+      .eq("is_published", true)
+      .order("sort_order", { ascending: true });
+    if (error) { console.error(error); return []; }
+    return data || [];
+  }
+
+  async function fetchPosts({ limit } = {}) {
+    const db = getClient();
+    if (!db) return [];
+    let q = db
+      .from("blog_posts")
+      .select("id, slug, title, excerpt, cover_image, published_at, tags")
+      .eq("is_published", true)
+      .order("published_at", { ascending: false });
+    if (limit) q = q.limit(limit);
+    const { data, error } = await q;
+    if (error) { console.error(error); return []; }
+    return data || [];
+  }
+
+  async function fetchPostBySlug(slug) {
+    const db = getClient();
+    if (!db) return null;
+    const { data, error } = await db
+      .from("blog_posts")
+      .select("*")
+      .eq("slug", slug)
+      .eq("is_published", true)
+      .single();
+    if (error) { console.error(error); return null; }
+    return data;
+  }
+
+  async function submitMessage({ name, email, subject, message }) {
+    const db = getClient();
+    if (!db) return { ok: false, reason: "not_configured" };
+    const { error } = await db.from("messages").insert([{ name, email, subject, message }]);
+    if (error) { console.error(error); return { ok: false, reason: error.message }; }
+    return { ok: true };
+  }
+
+  window.PrajnaDB = { fetchProducts, fetchPosts, fetchPostBySlug, submitMessage };
+})();
